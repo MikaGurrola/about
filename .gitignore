@@ -8,3 +8,7 @@ logs/*
 node_modules/
 bower_components/
 tmp
+
+gulpfile.js
+package.json
+dev/
