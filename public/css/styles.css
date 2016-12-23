@@ -85,13 +85,15 @@ p {
     .hero {
       height: 40vh; } }
   .hero .content {
-    margin-top: 20%;
+    margin-top: 15%;
     max-height: 500px;
     width: 100%;
     text-align: center; }
 
 .flex-this {
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
   overflow: auto; }
@@ -99,25 +101,32 @@ p {
 .item {
   width: 100%;
   padding: 35px 0;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: center;
   justify-content: center; }
   @media screen and (max-width: 700px) {
     .item {
       height: 100%;
+      -ms-flex-direction: column;
       flex-direction: column; } }
   .item:nth-child(2n+0) {
     background: linear-gradient(#00A3A4, #005255); }
     .item:nth-child(2n+0) img {
+      -ms-flex-order: 2;
       order: 2;
       margin: 0 50px 0 0; }
     .item:nth-child(2n+0) p {
       color: white; }
     @media screen and (max-width: 700px) {
       .item:nth-child(2n+0) img {
+        -ms-flex-order: 1;
         order: 1;
         margin: 0 auto; }
       .item:nth-child(2n+0) p {
+        -ms-flex-order: 2;
         order: 2; } }
   .item:last-child {
     background: linear-gradient(#FF4692, #A70043); }
@@ -155,7 +164,9 @@ p {
   .footer h4 {
     color: white; }
   .footer .icons {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     max-width: 300px;
     margin: 15px auto; }
