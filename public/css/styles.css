@@ -60,7 +60,7 @@ h1 {
 
 h1 {
   font-weight: bold;
-  font-size: 12vw;
+  font-size: 10vw;
   text-align: center;
   line-height: 18vw;
   color: orangered; }
@@ -79,13 +79,12 @@ p {
   letter-spacing: 0.7px; }
 
 .hero {
-  height: 75vh;
-  overflow: auto; }
+  height: 400px; }
   @media screen and (max-width: 700px) {
     .hero {
-      height: 40vh; } }
+      height: 300px; } }
   .hero .content {
-    margin-top: 15%;
+    margin-top: 100px;
     max-height: 500px;
     width: 100%;
     text-align: center; }
@@ -109,7 +108,6 @@ p {
   justify-content: center; }
   @media screen and (max-width: 700px) {
     .item {
-      height: 100%;
       -ms-flex-direction: column;
       flex-direction: column; } }
   .item:nth-child(2n+0) {
