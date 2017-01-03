@@ -67,7 +67,7 @@ h1 {
 
 @supports (-webkit-background-clip: text) {
   h1 {
-    background-image: url("../media/eyes.jpg");
+    background-image: url("../media/horizon.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     -webkit-background-clip: text;
@@ -78,24 +78,48 @@ p {
   line-height: 32px;
   letter-spacing: 0.7px; }
 
-.hero {
-  height: 400px; }
+.hero .content {
+  padding: 100px 0;
+  max-height: 500px;
+  width: 100%;
+  text-align: center; }
   @media screen and (max-width: 700px) {
-    .hero {
-      height: 300px; } }
-  .hero .content {
-    margin-top: 100px;
-    max-height: 500px;
-    width: 100%;
-    text-align: center; }
+    .hero .content {
+      margin: 50px 0; } }
 
-.flex-this {
+nav {
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  background: #343642;
+  padding: 25px 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  nav p {
+    color: white;
+    margin: 0 10px;
+    line-height: 1; }
+  nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase; }
+
+.nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0; }
+
+section {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
-  overflow: auto; }
+  position: relative; }
 
 .item {
   width: 100%;
@@ -152,21 +176,3 @@ p {
     @media screen and (max-width: 700px) {
       .item p {
         margin-top: 0; } }
-
-.footer {
-  text-align: center;
-  height: 100px;
-  background: #343642;
-  padding-top: 25px; }
-  .footer h4 {
-    color: white; }
-  .footer .icons {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    max-width: 300px;
-    margin: 15px auto; }
-    .footer .icons a {
-      color: white;
-      text-decoration: none; }
