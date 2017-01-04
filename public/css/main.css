@@ -180,7 +180,7 @@ strong {
         color: #29D9C2; }
 
 .portrait {
-  -webkit-clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(42% at 50% 50%);
   clip-path: circle(42% at 50% 50%); }
 
 .skillset {
