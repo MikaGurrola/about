@@ -1,6 +1,6 @@
 # About
 Just a simple one page site to showcase my portfolio and other work hosted on Github pages.
-Feel free to use this simple template. Check it out live at mikagurrola.com . 
+Feel free to use this simple template. Check it out live [HERE](http://www.mikagurrola.com/) on GHpages. 
 
 # Install
 Download repo
