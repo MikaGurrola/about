@@ -16,7 +16,7 @@ var section = $('section');
 $(window).scroll(function() {
 	if( $(this).scrollTop() > hero ) {
 		nav.addClass(navScrolled);
-		section.css('margin-top', '66px');
+		section.css('margin-top', '56px');
 		// mobileBar.css('position', 'initial');
 	} else {
 		nav.removeClass(navScrolled);
