@@ -65,14 +65,6 @@ h1 {
   line-height: 18vw;
   color: orangered; }
 
-@supports (-webkit-background-clip: text) {
-  h1 {
-    background-image: url("../media/horizon.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    -webkit-background-clip: text;
-    color: transparent; } }
-
 p {
   color: #343642;
   line-height: 32px;
@@ -113,7 +105,6 @@ strong {
   text-transform: none !important;
   speak: none;
   line-height: 1;
-  font-size: 19px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -128,6 +119,53 @@ strong {
 
 .icon-twitter:before {
   content: "\64"; }
+
+.icon-page-doc:before {
+  content: "\65"; }
+
+nav {
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  background: #343642;
+  padding: 10px 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  nav p {
+    color: white;
+    margin: 0 10px;
+    line-height: 1; }
+
+a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  transition: all 1s;
+  font-size: 32px; }
+  a:hover {
+    color: #29D9C2; }
+
+.nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  -webkit-transform: translate3d(0, 0, 0); }
+
+.mobile-nav {
+  background: #343642;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  transition: all .3s ease-in-out; }
+  @media screen and (min-width: 701px) {
+    .mobile-nav {
+      display: none; } }
+  .mobile-nav p {
+    color: white; }
 
 .item {
   padding: 35px 0;
@@ -214,13 +252,17 @@ strong {
 
 .teal {
   background: linear-gradient(#00A3A4, #005255); }
-  .teal p {
+  .teal p, .teal .icon {
     color: white; }
+    .teal p:hover, .teal .icon:hover {
+      color: white; }
 
 .pink {
   background: linear-gradient(#FF4692, #A70043); }
-  .pink p {
+  .pink p, .pink .icon {
     color: white; }
+    .pink p:hover, .pink .icon:hover {
+      color: white; }
 
 .purple {
   background: linear-gradient(#9c27b0, #673ab7); }
@@ -229,64 +271,17 @@ strong {
 
 .gray {
   background: linear-gradient(#78909c, #263238); }
-  @media screen and (max-width: 700px) {
-    .gray .skillset {
-      -ms-flex-order: 2;
-      order: 2; } }
-
-.hero .content {
-  padding: 100px 0;
-  max-height: 500px;
-  width: 100%;
-  text-align: center; }
-
-nav {
-  position: relative;
-  z-index: 10;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
-  text-align: center;
-  background: #343642;
-  padding: 25px 0;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center; }
-  @media screen and (max-width: 700px) {
-    nav .button {
-      display: none; } }
-  @media screen and (min-width: 701px) {
-    nav .icon {
-      display: none; } }
-  nav p {
-    color: white;
-    margin: 0 10px;
-    line-height: 1; }
-
-a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all 1s;
-  font-weight: bold; }
-  a:hover {
-    color: #29D9C2; }
-
-.nav-scrolled {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  -webkit-transform: translate3d(0, 0, 0); }
-
-.mobile-nav {
-  background: #343642;
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  width: 100%;
-  transition: all .3s ease-in-out; }
-  @media screen and (min-width: 701px) {
-    .mobile-nav {
-      display: none; } }
-  .mobile-nav p {
+  .gray p {
     color: white; }
+
+.hero {
+  background: url(../media/header.jpg) no-repeat center center fixed;
+  background-size: cover;
+  filter: brightness(70%); }
+  .hero .content {
+    padding: 100px 0;
+    max-height: 500px;
+    width: 100%;
+    text-align: center; }
+    .hero .content h1, .hero .content p {
+      color: white; }
