@@ -1,8 +1,8 @@
-# about
+# About
 Just a simple one page site to showcase my portfolio and other work hosted on Github pages.
-Feel free to use this simple template. 
+Feel free to use this simple template. Check it out live at mikagurrola.com . 
 
-# install
+# Install
 Download repo
 
 Get into directory
@@ -14,4 +14,7 @@ install npm packages
 run the gulp watch command to watch for changes in the sass files
 `$ gulp watch`
 
-*note* there is no live-reloading so you'll have to refresh the page to see the changes. 
+__note__ there is no live-reloading so you'll have to refresh the page to see the changes. 
+
+# Built with
+Sass, Gulp and an awesome and minimal JS library for animating on scroll [AOS](https://github.com/michalsnik/aos), Icons are from Fontastic.
