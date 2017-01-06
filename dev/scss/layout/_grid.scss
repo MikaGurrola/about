@@ -1,0 +1,122 @@
+.item {
+	padding: 35px 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	min-height: 583px;
+	@media screen and (max-width: 700px) {
+		flex-direction: column;
+	}
+	&:nth-child(2n+0) {
+	    img {
+	    	order: 2;
+	    }
+	    @media screen and (max-width: 700px) {
+	    	img {
+	    		order: 1;
+	    	}
+	    	p {
+	    		order: 2;
+	    	}
+	    }
+	}
+	img {
+		max-height: 512px;
+		max-width: 300px;
+		height: 100%;
+		width: 100%;
+		margin: auto;
+		@media screen and (max-width: 700px) {
+			height: auto;
+			width: auto;
+			margin: 0 auto;
+		}
+		@media screen and (max-width: 400px) {
+			height: auto;
+			width: 100%;
+		}
+	}
+	p {
+		max-width: 300px;
+		margin: auto;
+		padding: 15px;
+		a {
+			color: #343642;
+			transition: all 1s;
+			margin: 0;
+			&:hover {
+				color: #29D9C2;
+			}
+		}
+	}
+}
+
+
+.portrait {
+	-webkit-clip-path: circle(42% at 50% 50%);
+	clip-path: circle(42% at 50% 50%);
+}
+
+// skills block styling
+.skillset {
+	width: 270px;
+	min-height: 400px;
+	padding: 15px;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+
+	@media screen and (max-width: 400px) {
+		margin: 0;
+	}
+	.stat {
+		display: flex;
+		justify-content: space-between;
+		color: white;
+	}
+	span {
+		color: white;
+	}
+	.proficiency {
+		display: flex;
+		justify-content: space-between;
+		width: 126px;
+	}
+}
+
+// colors for the blocks
+.teal {
+	background: linear-gradient(#00A3A4, #005255);
+	p, .icon {
+		color: white;
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.pink {
+	background: linear-gradient(#FF4692, #A70043);
+	p, .icon {
+		color: white;
+		&:hover {
+			color: white;
+		}
+	}
+}
+
+.purple {
+	background: linear-gradient(#9c27b0, #673ab7);
+	p {
+		color: white;
+	}
+}
+
+.gray {
+	background: linear-gradient(#78909c, #263238);
+	p {
+		color: white;
+	}
+}
