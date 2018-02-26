@@ -1,0 +1,89 @@
+@import '~sass/variables';
+
+
+// h1 {
+//   font-family: 'Give You Glory', cursive;
+//   font-size: 45px;
+//   line-height: 50px;
+//   text-align: center;
+// }
+
+.page {
+  background: $red;
+  background: linear-gradient(to bottom, $orange 0%, $red 100%);
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 50px;
+  // opacity: 0;
+  // animation: fadeIn 2000ms linear forwards;  
+}
+
+.hero {
+  background-color: $orange;
+  background-image: url('../../../assets/anthem.jpg');
+}
+
+
+.socials {
+  
+
+  &__item {
+    margin: 10px;
+  }
+}
+
+
+
+
+.img-overlay {
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--three21 {
+    background-color: $orange;
+    background-image: url('../../../assets/three21_1.jpg');
+  }
+
+  &--prpl {
+    background-color: $red;
+    background-image: url('../../../assets/prpl.jpg');
+  }
+
+  &--fullsail {
+    background-color: $red;
+    background-image: url('../../../assets/youtube.jpg');
+  }
+
+  background-position: center bottom;
+  background-size: cover;
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+}
+
+article.flex {
+  justify-content: space-between;
+
+  .img-overlay,
+  .content {
+    width: 45%;
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+
+    .img-overlay,
+    .content {
+      width: 100%;
+    }
+
+    .img-overlay {
+      height: 65vw;
+    }
+  }
+}

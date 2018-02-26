@@ -1,0 +1,18 @@
+@import '~sass/variables';
+
+.hero {
+  background-color: $blue;
+  background-image: url('../../../../assets/anthem.jpg');
+  // background-blend-mode: multiply;
+}
+
+.page {
+  // background: $purple;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 50px;
+  // opacity: 0;
+  // animation: fadeIn 2000ms linear forwards;  
+  background: linear-gradient(to bottom, $blue 0%, $purple 100%);
+}
