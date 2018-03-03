@@ -5996,11 +5996,11 @@ module.exports = g;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return animate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return animateChild; });
 /* unused harmony export animation */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return group; });
+/* unused harmony export group */
 /* unused harmony export keyframes */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return query; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return sequence; });
-/* unused harmony export stagger */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return query; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return sequence; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return stagger; });
 /* unused harmony export state */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return style; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return transition; });
@@ -8234,7 +8234,7 @@ function normalizeAnimationEntry(steps) {
     if (Array.isArray(steps)) {
         if (steps.length == 1)
             return steps[0];
-        return Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["i" /* sequence */])(steps);
+        return Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["h" /* sequence */])(steps);
     }
     return /** @type {?} */ (steps);
 }
@@ -73784,7 +73784,7 @@ var BrowserAnimationBuilder = /** @class */ (function (_super) {
     function (animation) {
         var /** @type {?} */ id = this._nextAnimationId.toString();
         this._nextAnimationId++;
-        var /** @type {?} */ entry = Array.isArray(animation) ? Object(__WEBPACK_IMPORTED_MODULE_3__angular_animations__["i" /* sequence */])(animation) : animation;
+        var /** @type {?} */ entry = Array.isArray(animation) ? Object(__WEBPACK_IMPORTED_MODULE_3__angular_animations__["h" /* sequence */])(animation) : animation;
         issueAnimationCommand(this._renderer, null, id, 'register', [entry]);
         return new BrowserAnimationFactory(id, this._renderer);
     };

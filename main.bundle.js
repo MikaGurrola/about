@@ -6,18 +6,20 @@ webpackJsonp(["main"],{
 var map = {
 	"./modules/ideas/ideas.module": [
 		"../../../../../src/app/modules/ideas/ideas.module.ts",
-		"ideas.module"
+		"ideas.module",
+		"common"
 	],
 	"./modules/stats/stats.module": [
 		"../../../../../src/app/modules/stats/stats.module.ts",
-		"stats.module"
+		"stats.module",
+		"common"
 	]
 };
 function webpackAsyncContext(req) {
 	var ids = map[req];
 	if(!ids)
 		return Promise.reject(new Error("Cannot find module '" + req + "'."));
-	return __webpack_require__.e(ids[1]).then(function() {
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
 		return __webpack_require__(ids[0]);
 	});
 };
@@ -87,7 +89,7 @@ var AppRoutingModule = (function () {
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav>\n  <ul class=\"navbar\">\n    <li>\n      <a  \n      [routerLink]=\"['home']\"\n      [routerLinkActive]=\"['active','red']\"\n      \n      >\n      <!-- <i class=\"material-icons\">home</i> -->\n      HOME\n      </a>\n    </li>\n    <li>\n      <a  \n      [routerLink]=\"['/stats']\"\n      [routerLinkActive]=\"['active','green']\"\n      \n      >\n      <!-- <i class=\"material-icons\">about</i> -->\n      STATS\n      </a>\n    </li>\n    <li>\n      <a  \n      [routerLink]=\"['/ideas']\"\n      [routerLinkActive]=\"['active','blue']\"\n      \n      >\n      <!-- <i class=\"material-icons\">about</i> -->\n      WORK\n      </a>\n    </li>\n  </ul>\n</nav>\n<div class=\"main\">\n  <div class=\"router-container\" [@routerTransition]=\"getState(o)\">\n    <router-outlet #o=\"outlet\"></router-outlet>\n  </div>\n</div>\n\n"
+module.exports = "<nav>\n  <ul class=\"navbar\">\n    <li>\n      <a  \n      [routerLink]=\"['home']\"\n      [routerLinkActive]=\"['active']\"\n      \n      >\n      HOME\n      </a>\n    </li>\n    <li>\n      <a  \n      [routerLink]=\"['/stats']\"\n      [routerLinkActive]=\"['active']\"\n      \n      >\n      <!-- <i class=\"material-icons\">about</i> -->\n      STATS\n      </a>\n    </li>\n    <li>\n      <a  \n      [routerLink]=\"['/ideas']\"\n      [routerLinkActive]=\"['active']\"\n      \n      >\n      <!-- <i class=\"material-icons\">about</i> -->\n      WORK\n      </a>\n    </li>\n  </ul>\n</nav>\n<div class=\"main\">\n  <div class=\"router-container\" [@routerTransition]=\"getState(o)\">\n    <router-outlet #o=\"outlet\"></router-outlet>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -99,7 +101,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".router-container {\n  min-height: 100vh; }\n\nnav {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  width: initial;\n  z-index: 10;\n  padding: 10px; }\n  nav ul {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center; }\n    nav ul li {\n      margin: 0 15px;\n      position: relative; }\n  nav a {\n    position: relative;\n    font-family: 'Righteous', cursive;\n    text-decoration: none;\n    color: white;\n    font-size: 30px;\n    line-height: 40px; }\n    nav a:active, nav a:visited {\n      color: white; }\n    nav a.red:after {\n      background: #FF1744; }\n    nav a.green:after {\n      background: #00695C; }\n    nav a.blue:after {\n      background: #2979FF; }\n    nav a:after {\n      content: '';\n      height: 50px;\n      width: 50px;\n      display: block;\n      position: absolute;\n      top: -50%;\n      left: -0%;\n      z-index: -1;\n      border-radius: 50%; }\n    @media screen and (max-width: 600px) {\n      nav a {\n        font-size: 28px;\n        line-height: 30px; } }\n    @media screen and (max-width: 414px) {\n      nav a {\n        font-size: 20px;\n        line-height: 30px; } }\n\nbody {\n  position: relative; }\n\n.active:after {\n  -webkit-animation: rippleOverlay 1s linear forwards;\n          animation: rippleOverlay 1s linear forwards; }\n\n@-webkit-keyframes rippleOverlay {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0; }\n  20% {\n    -webkit-transform: scale(50);\n            transform: scale(50);\n    opacity: 1; }\n  40% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 1; }\n  60% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.8; }\n  80% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.5; }\n  100% {\n    -webkit-transform: scale(0);\n            transform: scale(0);\n    opacity: 0; } }\n\n@keyframes rippleOverlay {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0; }\n  20% {\n    -webkit-transform: scale(50);\n            transform: scale(50);\n    opacity: 1; }\n  40% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 1; }\n  60% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.8; }\n  80% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.5; }\n  100% {\n    -webkit-transform: scale(0);\n            transform: scale(0);\n    opacity: 0; } }\n", ""]);
+exports.push([module.i, ".router-container {\n  min-height: 100vh; }\n\nnav {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  width: initial;\n  z-index: 10;\n  padding: 10px;\n  background: #212121; }\n  nav ul {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center; }\n    nav ul li {\n      margin: 0 15px;\n      position: relative; }\n  nav a {\n    position: relative;\n    font-family: 'Righteous', cursive;\n    text-decoration: none;\n    color: white;\n    opacity: 0.5;\n    transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);\n    font-size: 30px;\n    line-height: 40px; }\n    nav a:visited {\n      color: white; }\n    nav a.active, nav a:hover, nav a:active {\n      opacity: 1; }\n    @media screen and (max-width: 600px) {\n      nav a {\n        font-size: 28px;\n        line-height: 30px; } }\n    @media screen and (max-width: 414px) {\n      nav a {\n        font-size: 20px;\n        line-height: 30px; } }\n\nbody {\n  position: relative; }\n\n@-webkit-keyframes rippleOverlay {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0; }\n  20% {\n    -webkit-transform: scale(50);\n            transform: scale(50);\n    opacity: 1; }\n  40% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 1; }\n  60% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.8; }\n  80% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.5; }\n  100% {\n    -webkit-transform: scale(0);\n            transform: scale(0);\n    opacity: 0; } }\n\n@keyframes rippleOverlay {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0; }\n  20% {\n    -webkit-transform: scale(50);\n            transform: scale(50);\n    opacity: 1; }\n  40% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 1; }\n  60% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.8; }\n  80% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.5; }\n  100% {\n    -webkit-transform: scale(0);\n            transform: scale(0);\n    opacity: 0; } }\n", ""]);
 
 // exports
 
@@ -204,7 +206,7 @@ var AppModule = (function () {
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"page\">\n\n\n  <div class=\"hero\">\n    <h1>Mika Gurrola</h1>\n    <p>Front End Web Developer</p>\n    <a class=\"btn\" href=\"../../../assets/ResumeFeb2017.pdf\" download>DOWNLOAD résumé <i class=\"fas fa-file-alt\"></i></a>\n  </div>\n\n\n  <div class=\"container\">\n    <h1>Experience</h1>\n    <article class=\"flex\">\n      <div class=\"img-overlay img-overlay--three21\"></div>\n      <div class=\"content\">\n        <h2>Three21, Orlando FL — Web Developer</h2>\n        <span>FEBRUARY 2017 - PRESENT</span>\n        <p>Being part of a small but capable team of three developers I had to take on a Full Stack developer role. This includes providing templates with automated workflows for local development as well as setup staging/live environments between multiple hosting services. Besides building custom WordPress themes/plugins, I have also built custom features for clients and recently started development on a native Android app.</p>   \n      </div>\n   \n    </article>\n\n    <article class=\"flex\">\n      <div class=\"img-overlay img-overlay--prpl\"></div>\n      <div class=\"content\">\n        <h2>Purple, Rock, Scissors, Orlando, FL — Front End Developer</h2>\n        <span>AUGUST 2016 - DEC 2016</span>\n        <p>Joining the team Full time I built my first client project with WordPress and saw the project from design hand off to launch. </p>   \n        \n        <p class=\"h2\">Developer Intern</p>\n        <span>MAY 2014 - AUGUST 2016</span>\n        <p>My intro to the chaotic world of Agency life with a ton of projects with short turnarounds. This was also when I was thrown into the fire of CMS’s like Drupal and WordPress. I learned a great deal about the roles and process of web development in the marketing industry.</p>   \n      </div>\n    </article>\n\n\n  </div>\n\n  <div class=\"container\">\n    <h1>Education</h1>\n    <article class=\"flex\">\n      <div class=\"img-overlay img-overlay--fullsail\"></div>\n      <div class=\"content\">\n        \n        <h2>Full Sail, Winter Park, FL — BS Computer Science</h2>\n        <span>FEBRUARY 2014 - MARCH 2016</span>\n        <p>This crash course into web technologies has led me from the front to the back end of development. Going through SSL & Databases I found my way to the wonderful world of JS Frameworks like ReactJS and AngularJS enabling me to build out my ideas into prototypes. </p>  \n      </div>\n    </article>\n  </div>\n\n  <div class=\"container\">\n    <h1>Extracurriculars</h1>\n    <ul class=\"flex socials\">\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://www.instagram.com/mikaelgrr/\" class=\"btn\">\n          <i class=\"fab fa-instagram\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://twitter.com/mikaelgrr\" class=\"btn\">\n          <i class=\"fab fa-twitter\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://github.com/MikaGurrola\" class=\"btn\">\n          <i class=\"fab fa-github\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://www.linkedin.com/in/mika-gurrola-5820858b/\" class=\"btn\">\n          <i class=\"fab fa-linkedin\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://codepen.io/MikaGurrola/\" class=\"btn\">\n          <i class=\"fab fa-codepen\"></i>\n        </a>\n      </li>\n    </ul>\n  </div>\n\n\n\n</div>"
+module.exports = "<div class=\"page\">\n\n\n  <div class=\"hero animate\">\n    <h1>Mika Gurrola</h1>\n    <p>Front End Web Developer</p>\n    <a class=\"btn\" href=\"../../../assets/ResumeFeb2017.pdf\" download>DOWNLOAD résumé <i class=\"fas fa-file-alt\"></i></a>\n  </div>\n\n\n  <div class=\"container animate\">\n    <h1>Experience</h1>\n    <article class=\"flex\">\n      <div class=\"img-overlay img-overlay--three21\"></div>\n      <div class=\"content\">\n        <h2>Three21, Orlando FL — Web Developer</h2>\n        <span>FEBRUARY 2017 - PRESENT</span>\n        <p>Being part of a small but capable team of three developers I had to take on a Full Stack developer role. This includes providing templates with automated workflows for local development as well as setup staging/live environments between multiple hosting services. Besides building custom WordPress themes/plugins, I have also built custom features for a native Android app.</p>   \n      </div>\n   \n    </article>\n\n    <article class=\"flex\">\n      <div class=\"img-overlay img-overlay--prpl\"></div>\n      <div class=\"content\">\n        <h2>Purple, Rock, Scissors, Orlando, FL — Front End Developer</h2>\n        <span>AUGUST 2016 - DEC 2016</span> \n        \n        <p class=\"h2\">Developer Intern</p>\n        <span>MAY 2014 - AUGUST 2016</span>\n        <p>My intro to the chaotic world of Agency life with a ton of projects with short turnarounds. This was also when I was thrown into the fire of CMS’s like Drupal and WordPress. I learned a great deal about the roles of a web developer and how to work with teams from all departments striving for the same goal.</p>   \n      </div>\n    </article>\n\n\n  </div>\n\n  <div class=\"container animate\">\n    <h1>Education</h1>\n    <article class=\"flex\">\n      <div class=\"img-overlay img-overlay--fullsail\"></div>\n      <div class=\"content\">\n        \n        <h2>Full Sail, Winter Park, FL — BS Computer Science</h2>\n        <span>FEBRUARY 2014 - MARCH 2016</span>\n        <p>This crash course into web technologies has led me from the front to the back end of development. Going through SSL & Databases I found my way to the wonderful world of JS Frameworks like ReactJS and AngularJS enabling me to build out my ideas into prototypes. </p>  \n      </div>\n    </article>\n  </div>\n\n  <div class=\"container animate\">\n    <h1>Extracurriculars</h1>\n    <ul class=\"flex socials\">\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://www.instagram.com/mikaelgrr/\" class=\"btn\">\n          <i class=\"fab fa-instagram\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://twitter.com/mikaelgrr\" class=\"btn\">\n          <i class=\"fab fa-twitter\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://github.com/MikaGurrola\" class=\"btn\">\n          <i class=\"fab fa-github\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://www.linkedin.com/in/mika-gurrola-5820858b/\" class=\"btn\">\n          <i class=\"fab fa-linkedin\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://codepen.io/MikaGurrola/\" class=\"btn\">\n          <i class=\"fab fa-codepen\"></i>\n        </a>\n      </li>\n    </ul>\n  </div>\n\n\n\n</div>"
 
 /***/ }),
 
@@ -217,7 +219,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".page {\n  background: #FF1744;\n  background: linear-gradient(to bottom, #FF3D00 0%, #FF1744 100%);\n  height: 100%;\n  width: 100%;\n  min-height: 100vh;\n  padding-top: 50px; }\n\n.hero {\n  background-color: #FF3D00;\n  background-image: url(" + escape(__webpack_require__("../../../../../src/assets/anthem.jpg")) + "); }\n\n.socials__item {\n  margin: 10px; }\n\n.img-overlay {\n  text-align: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  height: 25vw;\n  background-position: center bottom;\n  background-size: cover;\n  background-blend-mode: lighten;\n  background-repeat: no-repeat;\n  position: relative;\n  display: flex; }\n  .img-overlay--three21 {\n    background-color: #FF3D00;\n    background-image: url(" + escape(__webpack_require__("../../../../../src/assets/three21_1.jpg")) + "); }\n  .img-overlay--prpl {\n    background-color: #FF1744;\n    background-image: url(" + escape(__webpack_require__("../../../../../src/assets/prpl.jpg")) + "); }\n  .img-overlay--fullsail {\n    background-color: #FF1744;\n    background-image: url(" + escape(__webpack_require__("../../../../../src/assets/youtube.jpg")) + "); }\n\narticle.flex {\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  article.flex .img-overlay,\n  article.flex .content {\n    width: 45%; }\n  @media screen and (max-width: 600px) {\n    article.flex {\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column; }\n      article.flex .img-overlay,\n      article.flex .content {\n        width: 100%; }\n      article.flex .img-overlay {\n        height: 65vw; } }\n", ""]);
+exports.push([module.i, ".hero {\n  background-color: #FF1744;\n  background-blend-mode: darken;\n  background-image: url(" + escape(__webpack_require__("../../../../../src/assets/anthem.jpg")) + "); }\n\n.img-overlay {\n  text-align: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  height: 25vw;\n  background-position: center bottom;\n  background-size: cover;\n  background-blend-mode: darken;\n  background-repeat: no-repeat;\n  position: relative;\n  display: flex; }\n  .img-overlay--three21 {\n    background-color: #FF1744;\n    background-image: url(" + escape(__webpack_require__("../../../../../src/assets/three21_1.jpg")) + "); }\n  .img-overlay--prpl {\n    background-color: #FF1744;\n    background-image: url(" + escape(__webpack_require__("../../../../../src/assets/prpl.jpg")) + "); }\n  .img-overlay--fullsail {\n    background-color: #FF1744;\n    background-image: url(" + escape(__webpack_require__("../../../../../src/assets/youtube.jpg")) + "); }\n\narticle.flex {\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  article.flex .img-overlay,\n  article.flex .content {\n    width: 45%; }\n  @media screen and (max-width: 600px) {\n    article.flex {\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column; }\n      article.flex .img-overlay,\n      article.flex .content {\n        width: 100%; }\n      article.flex .img-overlay {\n        height: 65vw; } }\n", ""]);
 
 // exports
 
@@ -231,8 +233,10 @@ module.exports = module.exports.toString();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export pageTransition */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__("../../../animations/esm5/animations.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -243,6 +247,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+var query = function (s, a, o) {
+    if (o === void 0) { o = { optional: true }; }
+    return Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["g" /* query */])(s, a, o);
+};
+var pageTransition = Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* trigger */])('pageTransition', [
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* transition */])(':enter', [
+        query('.animate', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* style */])({ opacity: 0 })),
+        query('.animate', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* stagger */])(300, [
+            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* style */])({ transform: 'translateY(100px)' }),
+            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])('1s cubic-bezier(.75,-0.48,.26,1.52)', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* style */])({ transform: 'translateY(0px)', opacity: 1 })),
+        ])),
+    ]),
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* transition */])(':leave', [
+        query('.animate', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* stagger */])(300, [
+            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* style */])({ transform: 'translateY(0px)', opacity: 1 }),
+            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])('1s cubic-bezier(.75,-0.48,.26,1.52)', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* style */])({ transform: 'translateY(100px)', opacity: 0 })),
+        ])),
+    ])
+]);
 var HomeComponent = (function () {
     function HomeComponent() {
     }
@@ -252,7 +276,11 @@ var HomeComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-home',
             template: __webpack_require__("../../../../../src/app/components/home/home.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/home/home.component.scss")]
+            styles: [__webpack_require__("../../../../../src/app/components/home/home.component.scss")],
+            animations: [pageTransition],
+            host: {
+                '[@pageTransition]': ''
+            },
         }),
         __metadata("design:paramtypes", [])
     ], HomeComponent);
@@ -272,7 +300,7 @@ var HomeComponent = (function () {
 
 var query = function (s, a, o) {
     if (o === void 0) { o = { optional: true }; }
-    return Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["h" /* query */])(s, a, o);
+    return Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["g" /* query */])(s, a, o);
 };
 var routerTransition = Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["l" /* trigger */])('routerTransition', [
     // when transitioning FROM any state T0 any state
@@ -280,18 +308,22 @@ var routerTransition = Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__[
         query(':enter, :leave', Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["j" /* style */])({ position: 'fixed', width: '100%' })),
         // query(':enter', style({ transform: 'translateX(100%)' })),
         query(':leave', Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["f" /* animateChild */])()),
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["i" /* sequence */])([
-            Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["g" /* group */])([
-                query(':leave', [
-                    Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["j" /* style */])({ opacity: ' 1' }),
-                    Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["e" /* animate */])('0.75s cubic-bezier(.75,-0.48,.26,1.52)', Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["j" /* style */])({ opacity: ' 0' }))
-                ], { optional: true }),
-                query(':enter', [
-                    Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["j" /* style */])({ opacity: '0' }),
-                    Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["e" /* animate */])('0.75s cubic-bezier(.75,-0.48,.26,1.52)', Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["j" /* style */])({ opacity: '1' }))
-                ], { optional: true }),
-            ]),
-        ]),
+        // sequence([
+        //   group([
+        //     query(':leave', [
+        //       style({ opacity: ' 1' }),
+        //       animate('0.25s cubic-bezier(.75,-0.48,.26,1.52)', 
+        //       style({ opacity: ' 0' }))
+        //     ],
+        //     { optional: true }),
+        //     query(':enter', [
+        //       style({ opacity: '0' }),
+        //       animate('0.25s cubic-bezier(.75,-0.48,.26,1.52)', 
+        //       style({ opacity: '1' }))
+        //     ],
+        //     { optional: true }),
+        //   ]),
+        // ]),
         query(':enter', Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["f" /* animateChild */])()),
     ])
 ]);
