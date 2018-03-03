@@ -9,21 +9,27 @@
 
 
 .hero {
-  background-color: $teal;
-  background-image: url('../../../../assets/anthem.jpg');
+  height: initial;
+  // background-color: $teal;
+  // background-image: url('../../../../assets/anthem.jpg');
   background-blend-mode: multiply;
+  padding: 50px 0;
+
+  @media screen and (max-width: 600px) {
+    // height: initial;
+  }
 }
 
-.page {
-  background: $teal;
-  height: 100%;
-  width: 100%;
-  min-height: 100vh;
-  padding-top: 50px;
-  background: linear-gradient(to bottom, $teal 0%, $green 100%);
-  // opacity: 0;
-  // animation: fadeIn 2000ms linear forwards;  
-}
+// .page {
+//   background: $teal;
+//   height: 100%;
+//   width: 100%;
+//   min-height: 100vh;
+//   padding-top: 60px;
+//   background: linear-gradient(to bottom, $teal 0%, $green 100%);
+//   // opacity: 0;
+//   // animation: fadeIn 2000ms linear forwards;  
+// }
 
 @keyframes fadeIn {
   from { 
@@ -59,5 +65,94 @@
   @media screen and (max-width: 600px) {
     width: 90%;
     margin: 0 auto;
+  }
+}
+
+
+
+
+
+.projects {
+
+  &__demo {
+    position: relative;
+
+    .pixel2 {
+      width: 250px;
+      height: 500px;
+      margin: 0 auto;
+
+      position: relative;
+      z-index: 2;
+
+      &:hover + .cmy {
+        background-position:
+        top center,
+        top center,
+        top center;
+      }
+    }
+
+    .cmy {
+      z-index: 0;
+      position: absolute;
+      top: 32px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-blend-mode: multiply;
+      background:
+      url('../../../../assets/demos/outOrl/cyan.png'),
+      url('../../../../assets/demos/outOrl/magenta.png'),
+      url('../../../../assets/demos/outOrl/yellow.png');
+      
+      background-repeat: no-repeat;
+      background-size: 228px 439px;
+      transition: .25s .5s;
+      width: 200%;
+      left: -50%;
+
+
+      animation-duration: 5s;
+      animation-name: blend;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-direction: alternate;
+
+      @media screen and (max-width: 600px) {
+        width: 150%;
+        left: -25%;
+      }
+    }
+  }
+}
+
+@keyframes blend {
+  0% {
+    background-position:
+    top left,
+    top center,
+    top right;
+  }
+
+  20% {
+    background-position:
+    top center,
+    top center,
+    top center;
+  }
+
+  80% {
+    background-position:
+    top center,
+    top center,
+    top center;
+  }
+
+  100% {
+    background-position:
+    top left,
+    top center,
+    top right;
   }
 }

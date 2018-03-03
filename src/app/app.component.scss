@@ -10,14 +10,14 @@
 
 nav {
   // border: 2px solid blue;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: initial;
   z-index: 10;
   padding: 10px;
-  
+  background: $gray;
 
   ul {
     display: flex;
@@ -38,35 +38,17 @@ nav {
     font-family: 'Righteous', cursive;
     text-decoration: none;
     color: white;
-    &:active, 
+    opacity: 0.5;
+    transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
     &:visited {
       color: white;
     }
 
-    &.red:after {
-      background: $red;
-    }
-
-    &.green:after {
-      background: $teal;
-    }
-
-    &.blue:after {
-      background: $blue;
-    }
-
-    &:after {
-      content: '';
-      height: 50px;
-      width: 50px;
-      display: block;
-      position: absolute;
-      top: -50%;
-      left: -0%;
-      z-index: -1;
-      border-radius: 50%;
-
-
+    &.active,
+    &:hover, 
+    &:active {
+      opacity: 1;
     }
 
     font-size: 30px;
@@ -92,7 +74,7 @@ body {
 .active {
 
     &:after {
-      animation: rippleOverlay 2000ms linear forwards;  
+      // animation: rippleOverlay 1s linear forwards;  
     }
 }
 
@@ -129,3 +111,12 @@ body {
   }
 }
 
+
+
+// footer {
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   z-index: 5;
+//   width: 100%;
+// }

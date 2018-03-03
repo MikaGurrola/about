@@ -3,16 +3,155 @@
 .hero {
   background-color: $blue;
   background-image: url('../../../../assets/anthem.jpg');
-  // background-blend-mode: multiply;
 }
 
-.page {
-  // background: $purple;
-  height: 100%;
-  width: 100%;
-  min-height: 100vh;
-  padding-top: 50px;
-  // opacity: 0;
-  // animation: fadeIn 2000ms linear forwards;  
-  background: linear-gradient(to bottom, $blue 0%, $purple 100%);
+// .page {
+//   height: 100%;
+//   width: 100%;
+//   min-height: 100vh;
+//   padding-top: 50px; 
+//   background: linear-gradient(to bottom, $blue 0%, $purple 100%);
+// }
+
+
+.projects {
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+
+    &:nth-child(even) {
+      .projects__demo {
+        order: 2;
+        .cmy {
+          animation-delay: 2.5s;
+        }
+      }
+      .projects__content {
+        order: 1;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+
+      &:nth-child(even) {
+        .projects__demo {
+          order: 1;
+        }
+        .projects__content {
+          order: 2;
+        }
+      }
+    }
+  }
+
+  &__demo,
+  &__content {
+    width: 45%;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
+  }
+
+  &__demo {
+    position: relative;
+    overflow: hidden;
+
+    .pixel2 {
+      width: 250px;
+      height: 500px;
+      margin: 0 auto;
+
+      position: relative;
+      z-index: 2;
+
+      &:hover + .cmy {
+        background-position:
+        top center,
+        top center,
+        top center;
+      }
+    }
+
+    .gif {
+      position: absolute;
+      top: 33px;
+      left: -2px;
+      right: 0;
+      z-index: 0;
+      margin: 0 auto;
+
+      img {
+        width: 220px;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
+
+
+    .cmy {
+      z-index: 0;
+      position: absolute;
+      top: 32px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-blend-mode: multiply;
+      background:
+      url('../../../../assets/demos/outOrl/cyan.png'),
+      url('../../../../assets/demos/outOrl/magenta.png'),
+      url('../../../../assets/demos/outOrl/yellow.png');
+      
+      background-repeat: no-repeat;
+      background-size: 228px 439px;
+      transition: .25s .5s;
+      width: 200%;
+      left: -50%;
+
+
+      animation-duration: 5s;
+      animation-name: blend;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-direction: alternate;
+
+      @media screen and (max-width: 600px) {
+        width: 150%;
+        left: -25%;
+      }
+    }
+  }
+}
+
+@keyframes blend {
+  0% {
+    background-position:
+    top left,
+    top center,
+    top right;
+  }
+
+  20% {
+    background-position:
+    top center,
+    top center,
+    top center;
+  }
+
+  80% {
+    background-position:
+    top center,
+    top center,
+    top center;
+  }
+
+  100% {
+    background-position:
+    top left,
+    top center,
+    top right;
+  }
 }

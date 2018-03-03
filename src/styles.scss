@@ -57,6 +57,8 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: white;
+  position: relative;
+  background: linear-gradient(to bottom, $gray 0%, $blueGray 100%);
 
   @media screen and (max-width: 600px) {
     font-size: 18px;
@@ -123,16 +125,20 @@ span {
   // padding: 15px;
 }
 
+article {
+  z-index: 1;
+}
 
 
-
+img,
 h1, .h1,
 h2, .h2,
 p, span, strong,
 a, button,
 li {
   &::selection {
-    background: $blueGray; 
+    color: $blueGray; 
+    background: white;
   }
 }
 
@@ -147,16 +153,44 @@ p {
   border: 2px solid white;
   padding: 5px 10px;
   display: inline-block;
+  transition: all 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+  background: $red;
 
   &:visited {
     color: white;
   }
+
+  &:hover, 
+  &:active,
+  &:focus {
+    background: $blue;
+    border: 2px solid $blue;
+  }
+
+  &--accent {
+    background: $blue;
+    &:hover, 
+    &:active,
+    &:focus {
+      background: $red;
+      border: 2px solid $red;
+    }
+  }
 } 
+
 
 .flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+
+.socials {
+  margin: 20px 0;
+  &__item {
+    margin: 10px;
+  }
 }
 
 
@@ -182,17 +216,33 @@ p {
   align-items: center;
   flex-direction: column;
 
+  .content {
+    margin: 50px auto;
+  }
+
   @media screen and (max-width: 600px) {
     margin: 0 5% 5% 5%;
+    height: 50vh;
+    min-height: 300px;
   }
 }
 
 article {
-  margin-top: 50px;
-  margin-bottom: 50px;
-
+  margin: 10vh 0 20vh 0;
   @media screen and (max-width: 600px) {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 5vh 0 15vh 0;
+  }
+}
+
+.page {
+  height: 100%;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-top: 60px; 
+  // background: linear-gradient(to bottom, $gray 0%, $blueGray 100%);
+  @media screen and (max-width: 600px) {
+    padding-top: 50px; 
   }
 }

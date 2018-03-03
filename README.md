@@ -30,6 +30,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## build
 `ng build --no-aot --base-href https://mikagurrola.github.io/about/`
 
+## build with custom domain 
+`ng build --no-aot --base-href http://mikagurrola.com/`
+
 ## deply
 `ngh`
 
