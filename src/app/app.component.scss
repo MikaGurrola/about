@@ -47,6 +47,7 @@ nav {
 
     &.active,
     &:hover, 
+    &:focus,
     &:active {
       opacity: 1;
     }

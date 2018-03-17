@@ -20,15 +20,93 @@
 // }
 
 .hero {
-  background-color: $red;
-  background-blend-mode: darken;
-  background-image: url('../../../assets/anthem.jpg');
+  // background-color: $red;
+  // background-blend-mode: darken;
+  // background-image: url('../../../assets/anthem.jpg');
+
+  // background: 
+  //   linear-gradient($purple 0%, $red 80%), 
+  //   linear-gradient(to right, $purple 0%, $orange 100%),   
+  //   url('../../../assets/anthem.jpg');
+  // background-blend-mode: screen, difference, lighten;
+  // background-position: bottom center;
+  // background-size: cover;
+
+
+  background: 
+  linear-gradient($red 0%, $purple 80%), 
+  linear-gradient(to right, $orange 0%, $blue 100%),  
+  linear-gradient($gray 0%, $blueGray 100%),
+  url('../../../assets/mika3.jpg');
+  background-blend-mode: screen, difference, hard-light, lighten;
+  background-position: center top, center top, center bottom, center top;
+  background-size: 100% 100%, 100% 100%, 100% 0%, cover;
+  background-repeat: no-repeat;
+  transition: all 1.5s cubic-bezier(.55,0,.1,1);
+
+  &--center {
+
+    &:hover {
+      background-position: -100vw 0%, 100vw 0%, center bottom,  center bottom;
+      background-size: 100% 0%, 100% 0%, 100% 100%, cover;
+      background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin: 0 5% 100px 5%;
+      height: 50vh;
+      min-height: 300px;
+  
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+
+      background-size: 100% 100%, 100% 100%, 100% 0%,  200% auto;
+
+      animation-name: mobileBackgroundAnimation;
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+  
+
+      &:hover {
+        background-size: 100% 0%, 100% 0%, 100% 100%, 200% auto;
+      }
+    }
+
+  }
 }
 
 
 
+@keyframes mobileBackgroundAnimation {
+  0% {
+    background-size: 100% 100%, 100% 100%, 100% 0%,  200% auto;
+  }
+  100% {
+    background-size: 100% 0%, 100% 0%, 100% 100%, 200% auto;
+    background-position: -100vw 0%, 100vw 0%, center bottom,  center bottom;
+  }
+}
 
+article.flex {
 
+  .img-overlay {
+    background-position: center, center, center;
+    background-size: 100%, 100% , cover;
+    background-repeat: no-repeat;
+    transition: all 1s cubic-bezier(.55,0,.1,1);
+
+    @media screen and (max-width: 600px) {
+      background-size: 0, 0 , cover;
+    }
+  }
+
+  &:hover .img-overlay {
+    background-size: 0, 0 , cover;
+  }
+}
 
 .img-overlay {
 
@@ -39,25 +117,67 @@
 
   height: 25vw;
 
+  background-position: center, center, center;
+  background-size: 0, 0 , cover;
+  background-repeat: no-repeat;
+  transition: all 1.5s cubic-bezier(.55,0,.1,1);
+  &:hover, {
+    background-size: 0, 0 , cover;
+  }
+
+
+
+
   &--three21 {
-    background-color: $red;
-    background-image: url('../../../assets/three21_1.jpg');
+    // background-color: $red;
+    // background-image: url('../../../assets/three21_1.jpg');
+
+    background: 
+    linear-gradient($red 0%, $orange 80%), 
+    linear-gradient(to right, $red 0%, $orange 100%),   
+    url('../../../assets/three21_1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: screen, difference, lighten;
+
+    // background: 
+    // linear-gradient($red 0%, $orange 80%), 
+    // linear-gradient(to right, $red 0%, $orange 100%),   
+    // url('../../../assets/three21_1.jpg');
+    // background-blend-mode: screen, difference, lighten;
+    // background-position: center;
+    // background-size: cover;
+
   }
 
   &--prpl {
-    background-color: $red;
-    background-image: url('../../../assets/prpl.jpg');
+    // background-color: $red;
+    // background-image: url('../../../assets/prpl.jpg');
+
+    background: 
+    linear-gradient($red 0%, $orange 80%), 
+    linear-gradient(to right, $red 0%, $orange 100%),  
+    url('../../../assets/prpl.jpg');
+    background-blend-mode: screen, difference, lighten;
+    background-position: center;
+    background-size: cover;    
   }
 
   &--fullsail {
-    background-color: $red;
-    background-image: url('../../../assets/youtube.jpg');
+    // background-color: $red;
+    // background-image: url('../../../assets/youtube.jpg');
+
+
+    background: 
+    linear-gradient($red 0%, $orange 80%), 
+    linear-gradient(to right, $red 0%, $orange 100%),  
+    url('../../../assets/youtube.jpg');
+    background-blend-mode: screen, difference, lighten;
+    background-position: bottom center;
+    background-size: cover;
   }
 
-  background-position: center bottom;
-  background-size: cover;
-  background-blend-mode: darken;
-  background-repeat: no-repeat;
   position: relative;
   display: flex;
 }

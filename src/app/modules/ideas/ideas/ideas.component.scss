@@ -3,6 +3,80 @@
 .hero {
   background-color: $blue;
   background-image: url('../../../../assets/anthem.jpg');
+
+
+
+  background: 
+  linear-gradient(to right, $red 0%, $purple 80%), 
+  url('../../../../assets/mika1.jpg'),
+  linear-gradient($gray 0%, $blueGray 100%),
+  url('../../../../assets/anthem.jpg');
+  background-blend-mode: screen, lighten, hard-light, lighten;
+  background-position: center top, top center, center bottom, left bottom;
+  background-size: 100% 100%, cover, 100% 0%, 150vw auto;
+  background-repeat: no-repeat;
+  transition: all 1.5s cubic-bezier(.55,0,.1,1);
+
+  p {
+    padding: 15px;
+    color: $gray;
+    transition: all 1.5s cubic-bezier(.55,0,.1,1);
+  }
+
+  &:hover {
+    background-position: -100vw 0%, 100vw 0%, center bottom,  right bottom;
+    background-size: 100% 0%, cover, 100% 100%, 150vw auto;
+    background-repeat: no-repeat;
+    p {
+      color: white;
+    }  
+  }
+
+  @media screen and (max-width: 600px) {
+    margin: 0 5% 100px 5%;
+    height: 50vh;
+    min-height: 300px;
+
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+    background-position: center top, top center, center bottom, left bottom;
+    background-size: 100% 100%, cover, 100% 0%, cover;
+
+    animation-name: mobileBackgroundAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+
+    &:hover {
+      background-position: -100vw 0%, 100vw 0%, center bottom,  right bottom;
+      background-size: 100% 0%, cover, 100% 100%, cover;
+    }
+
+    p, .btn {
+      animation-name: mobileBackgroundAnimation;
+      animation-duration: 2s;
+      animation-iteration-count: 1;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes mobileBackgroundAnimation {
+  0% {
+    background-position: center top, top center, center bottom, left bottom;
+    background-size: 100% 100%, cover, 100% 0%, cover;
+  }
+  100% {
+    background-position: -100vw 0%, 100vw 0%, center bottom,  right bottom;
+    background-size: 100% 0%, cover, 100% 100%, cover;
+
+      color: white;
+
+  }
 }
 
 // .page {
@@ -122,6 +196,16 @@
         width: 150%;
         left: -25%;
       }
+    }
+  }
+
+  &__content {
+    h1 {
+      text-align: left;
+    }
+
+    .btn {
+      margin: 15px 15px 15px 0;
     }
   }
 }

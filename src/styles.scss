@@ -54,14 +54,14 @@ table {
 /* You can add global styles to this file, and also import other style files */
 body {
   font-family: 'Heebo', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   color: white;
   position: relative;
   background: linear-gradient(to bottom, $gray 0%, $blueGray 100%);
 
   @media screen and (max-width: 600px) {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 26px;
   }
 }
@@ -176,6 +176,46 @@ p {
       border: 2px solid $red;
     }
   }
+
+  &--white {
+    background: white;
+    color: $blueGray;
+    &:hover, 
+    &:active,
+    &:focus {
+      background: $red;
+      color: white;
+      border: 2px solid $red;
+    }
+  }
+
+  &--dark {
+    background: $gray;
+    color: white;
+    &:hover, 
+    &:active,
+    &:focus {
+      background: $blue;
+      color: white;
+      border: 2px solid $blue;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    background: initial;
+    &:hover, 
+    &:active,
+    &:focus {
+      cursor: default;
+      background: initial;
+      border-color: initial;
+    }
+  }
+
+  &--secondary {
+    background: transparent;
+  }
 } 
 
 
@@ -220,10 +260,24 @@ p {
     margin: 50px auto;
   }
 
+  p {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: justify;
+
+    @media screen and (max-width: 600px) {
+      margin: 10px auto;
+    }
+  }
+
   @media screen and (max-width: 600px) {
-    margin: 0 5% 5% 5%;
+    margin: 0 5% 100px 5%;
     height: 50vh;
     min-height: 300px;
+
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
   }
 }
 
