@@ -39,7 +39,8 @@ nav {
     text-decoration: none;
     color: white;
     opacity: 0.5;
-    transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: 25px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 
     &:visited {
       color: white;
@@ -50,6 +51,7 @@ nav {
     &:focus,
     &:active {
       opacity: 1;
+      font-size: 32px;
     }
 
     font-size: 30px;

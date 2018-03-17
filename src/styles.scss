@@ -144,6 +144,14 @@ li {
 
 p {
   margin: 10px 0;
+  text-align: justify;
+}
+
+.p {
+  &--max-width {
+    max-width: 680px;
+    margin: 15px auto;
+  }
 }
 
 .btn {
@@ -192,6 +200,7 @@ p {
   &--dark {
     background: $gray;
     color: white;
+    border: 2px solid $gray;
     &:hover, 
     &:active,
     &:focus {
@@ -245,11 +254,12 @@ p {
 
   // background-color: $orange;
   // background-image: url('../../../assets/anthem.jpg');
-  background-position: center bottom;
-  background-size: cover;
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  position: relative;
+
+  // background-position: center bottom;
+  // background-size: cover;
+  // background-blend-mode: multiply;
+  // background-repeat: no-repeat;
+  // position: relative;
 
   display: flex;
   justify-content: center;
