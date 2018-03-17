@@ -101,7 +101,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".router-container {\n  min-height: 100vh; }\n\nnav {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  width: initial;\n  z-index: 10;\n  padding: 10px;\n  background: #212121; }\n  nav ul {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center; }\n    nav ul li {\n      margin: 0 15px;\n      position: relative; }\n  nav a {\n    position: relative;\n    font-family: 'Righteous', cursive;\n    text-decoration: none;\n    color: white;\n    opacity: 0.5;\n    transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);\n    font-size: 30px;\n    line-height: 40px; }\n    nav a:visited {\n      color: white; }\n    nav a.active, nav a:hover, nav a:active {\n      opacity: 1; }\n    @media screen and (max-width: 600px) {\n      nav a {\n        font-size: 28px;\n        line-height: 30px; } }\n    @media screen and (max-width: 414px) {\n      nav a {\n        font-size: 20px;\n        line-height: 30px; } }\n\nbody {\n  position: relative; }\n\n@-webkit-keyframes rippleOverlay {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0; }\n  20% {\n    -webkit-transform: scale(50);\n            transform: scale(50);\n    opacity: 1; }\n  40% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 1; }\n  60% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.8; }\n  80% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.5; }\n  100% {\n    -webkit-transform: scale(0);\n            transform: scale(0);\n    opacity: 0; } }\n\n@keyframes rippleOverlay {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0; }\n  20% {\n    -webkit-transform: scale(50);\n            transform: scale(50);\n    opacity: 1; }\n  40% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 1; }\n  60% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.8; }\n  80% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.5; }\n  100% {\n    -webkit-transform: scale(0);\n            transform: scale(0);\n    opacity: 0; } }\n", ""]);
+exports.push([module.i, ".router-container {\n  min-height: 100vh; }\n\nnav {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  width: initial;\n  z-index: 10;\n  padding: 10px;\n  background: #212121; }\n  nav ul {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center; }\n    nav ul li {\n      margin: 0 15px;\n      position: relative; }\n  nav a {\n    position: relative;\n    font-family: 'Righteous', cursive;\n    text-decoration: none;\n    color: white;\n    opacity: 0.5;\n    transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);\n    font-size: 30px;\n    line-height: 40px; }\n    nav a:visited {\n      color: white; }\n    nav a.active, nav a:hover, nav a:focus, nav a:active {\n      opacity: 1; }\n    @media screen and (max-width: 600px) {\n      nav a {\n        font-size: 28px;\n        line-height: 30px; } }\n    @media screen and (max-width: 414px) {\n      nav a {\n        font-size: 20px;\n        line-height: 30px; } }\n\nbody {\n  position: relative; }\n\n@-webkit-keyframes rippleOverlay {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0; }\n  20% {\n    -webkit-transform: scale(50);\n            transform: scale(50);\n    opacity: 1; }\n  40% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 1; }\n  60% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.8; }\n  80% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.5; }\n  100% {\n    -webkit-transform: scale(0);\n            transform: scale(0);\n    opacity: 0; } }\n\n@keyframes rippleOverlay {\n  0% {\n    -webkit-transform: scale(1);\n            transform: scale(1);\n    opacity: 0; }\n  20% {\n    -webkit-transform: scale(50);\n            transform: scale(50);\n    opacity: 1; }\n  40% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 1; }\n  60% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.8; }\n  80% {\n    -webkit-transform: scale(100);\n            transform: scale(100);\n    opacity: 0.5; }\n  100% {\n    -webkit-transform: scale(0);\n            transform: scale(0);\n    opacity: 0; } }\n", ""]);
 
 // exports
 
@@ -166,12 +166,14 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_content_box_content_box_component__ = __webpack_require__("../../../../../src/app/components/content-box/content-box.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -185,7 +187,8 @@ var AppModule = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__components_home_home_component__["a" /* HomeComponent */]
+                __WEBPACK_IMPORTED_MODULE_5__components_home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__components_content_box_content_box_component__["a" /* ContentBoxComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -203,10 +206,110 @@ var AppModule = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/content-box/content-box.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"page\">\n  <p>\n    content-box works!\n  </p>\n\n  <div class=\"box\" [@scrollAnimation]=\"state\">\n    <img src=\"../../../assets/mika1.jpg\">\n  </div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/content-box/content-box.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/content-box/content-box.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export scrollAnimation */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContentBoxComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_animations__ = __webpack_require__("../../../animations/esm5/animations.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var scrollAnimation = Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* trigger */])('scrollAnimation', [
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* state */])('show', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* style */])({
+        opacity: 1,
+        transform: "translateX(0)"
+    })),
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* state */])('hide', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* style */])({
+        opacity: 0,
+        transform: "translateX(-100%)"
+    })),
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* transition */])('show => hide', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])('1s cubic-bezier(.55,0,.1,1)')),
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* transition */])('hide => show', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])('1s cubic-bezier(.55,0,.1,1)'))
+]);
+var ContentBoxComponent = (function () {
+    function ContentBoxComponent(el) {
+        this.el = el;
+        this.state = 'hide';
+    }
+    ContentBoxComponent.prototype.checkScroll = function () {
+        var componentPosition = this.el.nativeElement.offsetTop;
+        console.log('component position ' + componentPosition);
+        var scrollPosition = window.pageYOffset + 150;
+        console.log('scroll position ' + scrollPosition);
+        if (scrollPosition >= componentPosition) {
+            this.state = 'show';
+        }
+        else {
+            this.state = 'hide';
+        }
+    };
+    ContentBoxComponent.prototype.ngOnInit = function () {
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* HostListener */])('window:scroll', ['$event']),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", []),
+        __metadata("design:returntype", void 0)
+    ], ContentBoxComponent.prototype, "checkScroll", null);
+    ContentBoxComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-content-box',
+            template: __webpack_require__("../../../../../src/app/components/content-box/content-box.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/components/content-box/content-box.component.scss")],
+            animations: [scrollAnimation],
+            host: {
+                '[@scrollAnimation]': ''
+            },
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]])
+    ], ContentBoxComponent);
+    return ContentBoxComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"page\">\n\n\n  <div class=\"hero animate\">\n    <h1>Mika Gurrola</h1>\n    <p>Front End Web Developer</p>\n    <a class=\"btn\" href=\"../../../assets/ResumeFeb2017.pdf\" download>DOWNLOAD résumé <i class=\"fas fa-file-alt\"></i></a>\n  </div>\n\n\n  <div class=\"container animate\">\n    <h1>Experience</h1>\n    <article class=\"flex\">\n      <div class=\"img-overlay img-overlay--three21\"></div>\n      <div class=\"content\">\n        <h2>Three21, Orlando FL — Web Developer</h2>\n        <span>FEBRUARY 2017 - PRESENT</span>\n        <p>Being part of a small but capable team of three developers I had to take on a Full Stack developer role. This includes providing templates with automated workflows for local development as well as setup staging/live environments between multiple hosting services. Besides building custom WordPress themes/plugins, I have also built custom features for a native Android app.</p>   \n      </div>\n   \n    </article>\n\n    <article class=\"flex\">\n      <div class=\"img-overlay img-overlay--prpl\"></div>\n      <div class=\"content\">\n        <h2>Purple, Rock, Scissors, Orlando, FL — Front End Developer</h2>\n        <span>AUGUST 2016 - DEC 2016</span> \n        \n        <p class=\"h2\">Developer Intern</p>\n        <span>MAY 2014 - AUGUST 2016</span>\n        <p>My intro to the chaotic world of Agency life with a ton of projects with short turnarounds. This was also when I was thrown into the fire of CMS’s like Drupal and WordPress. I learned a great deal about the roles of a web developer and how to work with teams from all departments striving for the same goal.</p>   \n      </div>\n    </article>\n\n\n  </div>\n\n  <div class=\"container animate\">\n    <h1>Education</h1>\n    <article class=\"flex\">\n      <div class=\"img-overlay img-overlay--fullsail\"></div>\n      <div class=\"content\">\n        \n        <h2>Full Sail, Winter Park, FL — BS Computer Science</h2>\n        <span>FEBRUARY 2014 - MARCH 2016</span>\n        <p>This crash course into web technologies has led me from the front to the back end of development. Going through SSL & Databases I found my way to the wonderful world of JS Frameworks like ReactJS and AngularJS enabling me to build out my ideas into prototypes. </p>  \n      </div>\n    </article>\n  </div>\n\n  <div class=\"container animate\">\n    <h1>Extracurriculars</h1>\n    <ul class=\"flex socials\">\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://www.instagram.com/mikaelgrr/\" class=\"btn\">\n          <i class=\"fab fa-instagram\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://twitter.com/mikaelgrr\" class=\"btn\">\n          <i class=\"fab fa-twitter\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://github.com/MikaGurrola\" class=\"btn\">\n          <i class=\"fab fa-github\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://www.linkedin.com/in/mika-gurrola-5820858b/\" class=\"btn\">\n          <i class=\"fab fa-linkedin\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://codepen.io/MikaGurrola/\" class=\"btn\">\n          <i class=\"fab fa-codepen\"></i>\n        </a>\n      </li>\n    </ul>\n  </div>\n\n\n\n</div>"
+module.exports = "<div class=\"page animate\">\n\n\n  <div class=\"hero  hero--center\">\n    <h1>Mika Gurrola</h1>\n    <p>Front End Web Developer</p>\n    <a class=\"btn btn--white\" href=\"../../../assets/ResumeFeb2017.pdf\" download>DOWNLOAD resumé <i class=\"fas fa-file-alt\"></i></a>\n  </div>\n\n  <!-- <app-content-box></app-content-box> -->\n  \n  <div class=\"container\">\n    <h1>Experience</h1>\n    <article class=\"flex\">\n      <div class=\"img-overlay img-overlay--three21\"></div>\n      <div class=\"content\">\n        <h2>Three21, Orlando FL — Web Developer</h2>\n        <span>FEBRUARY 2017 - PRESENT</span>\n        <p>Being part of a small but capable team of three developers I had to take on a Full Stack developer role. This includes providing templates with automated workflows for local development as well as setup staging/live environments between multiple hosting services. Besides building custom WordPress themes/plugins, I have also built custom features for a native Android app.</p>   \n      </div>\n   \n    </article>\n\n    <article class=\"flex\">\n      <div class=\"img-overlay img-overlay--prpl\"></div>\n      <div class=\"content\">\n        <h2>Purple, Rock, Scissors, Orlando, FL — Front End Developer</h2>\n        <span>AUGUST 2016 - DEC 2016</span> \n        \n        <p class=\"h2\">Developer Intern</p>\n        <span>MAY 2014 - AUGUST 2016</span>\n        <p>My intro to the chaotic world of Agency life with a ton of projects with short turnarounds. This was also when I was thrown into the fire of CMS’s like Drupal and WordPress. I learned a great deal about the roles of a web developer and how to work with teams from all departments striving for the same goal.</p>   \n      </div>\n    </article>\n\n\n  </div>\n  <div class=\"container\">\n    <h1>Education</h1>\n    <article class=\"flex\">\n      <div class=\"img-overlay img-overlay--fullsail\"></div>\n      <div class=\"content\">\n        \n        <h2>Full Sail, Winter Park, FL — BS Computer Science</h2>\n        <span>FEBRUARY 2014 - MARCH 2016</span>\n        <p>This crash course into web technologies has led me from the front to the back end of development. Going through SSL & Databases I found my way to the wonderful world of JS Frameworks like ReactJS and AngularJS enabling me to build out my ideas into prototypes. </p>  \n      </div>\n    </article>\n  </div>\n\n  <div class=\"container\">\n    <h1>Extracurriculars</h1>\n    <ul class=\"flex socials\">\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://www.instagram.com/mikaelgrr/\" class=\"btn\">\n          <i class=\"fab fa-instagram\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://twitter.com/mikaelgrr\" class=\"btn\">\n          <i class=\"fab fa-twitter\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://github.com/MikaGurrola\" class=\"btn\">\n          <i class=\"fab fa-github\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://www.linkedin.com/in/mika-gurrola-5820858b/\" class=\"btn\">\n          <i class=\"fab fa-linkedin\"></i>\n        </a>\n      </li>\n      <li class=\"socials__item\">\n        <a target=\"_blank\" href=\"https://codepen.io/MikaGurrola/\" class=\"btn\">\n          <i class=\"fab fa-codepen\"></i>\n        </a>\n      </li>\n    </ul>\n  </div>\n\n\n\n</div>"
 
 /***/ }),
 
@@ -219,7 +322,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".hero {\n  background-color: #FF1744;\n  background-blend-mode: darken;\n  background-image: url(" + escape(__webpack_require__("../../../../../src/assets/anthem.jpg")) + "); }\n\n.img-overlay {\n  text-align: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  height: 25vw;\n  background-position: center bottom;\n  background-size: cover;\n  background-blend-mode: darken;\n  background-repeat: no-repeat;\n  position: relative;\n  display: flex; }\n  .img-overlay--three21 {\n    background-color: #FF1744;\n    background-image: url(" + escape(__webpack_require__("../../../../../src/assets/three21_1.jpg")) + "); }\n  .img-overlay--prpl {\n    background-color: #FF1744;\n    background-image: url(" + escape(__webpack_require__("../../../../../src/assets/prpl.jpg")) + "); }\n  .img-overlay--fullsail {\n    background-color: #FF1744;\n    background-image: url(" + escape(__webpack_require__("../../../../../src/assets/youtube.jpg")) + "); }\n\narticle.flex {\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  article.flex .img-overlay,\n  article.flex .content {\n    width: 45%; }\n  @media screen and (max-width: 600px) {\n    article.flex {\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column; }\n      article.flex .img-overlay,\n      article.flex .content {\n        width: 100%; }\n      article.flex .img-overlay {\n        height: 65vw; } }\n", ""]);
+exports.push([module.i, ".hero {\n  background: linear-gradient(#FF1744 0%, #651FFF 80%), linear-gradient(to right, #FF3D00 0%, #2979FF 100%), linear-gradient(#212121 0%, #263238 100%), url(" + escape(__webpack_require__("../../../../../src/assets/mika3.jpg")) + ");\n  background-blend-mode: screen, difference, hard-light, lighten;\n  background-position: center top, center top, center bottom, center top;\n  background-size: 100% 100%, 100% 100%, 100% 0%, cover;\n  background-repeat: no-repeat;\n  transition: all 1.5s cubic-bezier(0.55, 0, 0.1, 1); }\n  .hero--center:hover {\n    background-position: -100vw 0%, 100vw 0%, center bottom,  center bottom;\n    background-size: 100% 0%, 100% 0%, 100% 100%, cover;\n    background-repeat: no-repeat; }\n  @media screen and (max-width: 600px) {\n    .hero--center {\n      margin: 0 5% 100px 5%;\n      height: 50vh;\n      min-height: 300px;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      padding: 15px;\n      background-size: 100% 100%, 100% 100%, 100% 0%,  200% auto;\n      -webkit-animation-name: mobileBackgroundAnimation;\n              animation-name: mobileBackgroundAnimation;\n      -webkit-animation-duration: 2s;\n              animation-duration: 2s;\n      -webkit-animation-iteration-count: 1;\n              animation-iteration-count: 1;\n      -webkit-animation-delay: 3s;\n              animation-delay: 3s;\n      -webkit-animation-fill-mode: forwards;\n              animation-fill-mode: forwards; }\n      .hero--center:hover {\n        background-size: 100% 0%, 100% 0%, 100% 100%, 200% auto; } }\n\n@-webkit-keyframes mobileBackgroundAnimation {\n  0% {\n    background-size: 100% 100%, 100% 100%, 100% 0%,  200% auto; }\n  100% {\n    background-size: 100% 0%, 100% 0%, 100% 100%, 200% auto;\n    background-position: -100vw 0%, 100vw 0%, center bottom,  center bottom; } }\n\n@keyframes mobileBackgroundAnimation {\n  0% {\n    background-size: 100% 100%, 100% 100%, 100% 0%,  200% auto; }\n  100% {\n    background-size: 100% 0%, 100% 0%, 100% 100%, 200% auto;\n    background-position: -100vw 0%, 100vw 0%, center bottom,  center bottom; } }\n\narticle.flex .img-overlay {\n  background-position: center, center, center;\n  background-size: 100%, 100% , cover;\n  background-repeat: no-repeat;\n  transition: all 1s cubic-bezier(0.55, 0, 0.1, 1); }\n  @media screen and (max-width: 600px) {\n    article.flex .img-overlay {\n      background-size: 0, 0 , cover; } }\n\narticle.flex:hover .img-overlay {\n  background-size: 0, 0 , cover; }\n\n.img-overlay {\n  text-align: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  height: 25vw;\n  background-position: center, center, center;\n  background-size: 0, 0 , cover;\n  background-repeat: no-repeat;\n  transition: all 1.5s cubic-bezier(0.55, 0, 0.1, 1);\n  position: relative;\n  display: flex; }\n  .img-overlay:hover {\n    background-size: 0, 0 , cover; }\n  .img-overlay--three21 {\n    background: linear-gradient(#FF1744 0%, #FF3D00 80%), linear-gradient(to right, #FF1744 0%, #FF3D00 100%), url(" + escape(__webpack_require__("../../../../../src/assets/three21_1.jpg")) + ");\n    background-position: center;\n    background-size: cover;\n    background-repeat: no-repeat;\n    background-blend-mode: screen, difference, lighten; }\n  .img-overlay--prpl {\n    background: linear-gradient(#FF1744 0%, #FF3D00 80%), linear-gradient(to right, #FF1744 0%, #FF3D00 100%), url(" + escape(__webpack_require__("../../../../../src/assets/prpl.jpg")) + ");\n    background-blend-mode: screen, difference, lighten;\n    background-position: center;\n    background-size: cover; }\n  .img-overlay--fullsail {\n    background: linear-gradient(#FF1744 0%, #FF3D00 80%), linear-gradient(to right, #FF1744 0%, #FF3D00 100%), url(" + escape(__webpack_require__("../../../../../src/assets/youtube.jpg")) + ");\n    background-blend-mode: screen, difference, lighten;\n    background-position: bottom center;\n    background-size: cover; }\n\narticle.flex {\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n  article.flex .img-overlay,\n  article.flex .content {\n    width: 45%; }\n  @media screen and (max-width: 600px) {\n    article.flex {\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n          -ms-flex-direction: column;\n              flex-direction: column; }\n      article.flex .img-overlay,\n      article.flex .content {\n        width: 100%; }\n      article.flex .img-overlay {\n        height: 65vw; } }\n", ""]);
 
 // exports
 
@@ -252,18 +355,18 @@ var query = function (s, a, o) {
     if (o === void 0) { o = { optional: true }; }
     return Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["g" /* query */])(s, a, o);
 };
-var pageTransition = Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* trigger */])('pageTransition', [
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* transition */])(':enter', [
-        query('.animate', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* style */])({ opacity: 0 })),
+var pageTransition = Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["m" /* trigger */])('pageTransition', [
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* transition */])(':enter', [
+        query('.animate', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* style */])({ opacity: 0 })),
         query('.animate', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* stagger */])(300, [
-            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* style */])({ transform: 'translateY(100px)' }),
-            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])('1s cubic-bezier(.75,-0.48,.26,1.52)', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* style */])({ transform: 'translateY(0px)', opacity: 1 })),
+            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* style */])({ transform: 'translateY(100px)' }),
+            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])('1s cubic-bezier(.75,-0.48,.26,1.52)', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* style */])({ transform: 'translateY(0px)', opacity: 1 })),
         ])),
     ]),
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* transition */])(':leave', [
+    Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["l" /* transition */])(':leave', [
         query('.animate', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["i" /* stagger */])(300, [
-            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* style */])({ transform: 'translateY(0px)', opacity: 1 }),
-            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])('1s cubic-bezier(.75,-0.48,.26,1.52)', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["j" /* style */])({ transform: 'translateY(100px)', opacity: 0 })),
+            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* style */])({ transform: 'translateY(0px)', opacity: 1 }),
+            Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["e" /* animate */])('1s cubic-bezier(.75,-0.48,.26,1.52)', Object(__WEBPACK_IMPORTED_MODULE_1__angular_animations__["k" /* style */])({ transform: 'translateY(100px)', opacity: 0 })),
         ])),
     ])
 ]);
@@ -302,10 +405,10 @@ var query = function (s, a, o) {
     if (o === void 0) { o = { optional: true }; }
     return Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["g" /* query */])(s, a, o);
 };
-var routerTransition = Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["l" /* trigger */])('routerTransition', [
+var routerTransition = Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["m" /* trigger */])('routerTransition', [
     // when transitioning FROM any state T0 any state
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* transition */])('* <=> *', [
-        query(':enter, :leave', Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["j" /* style */])({ position: 'fixed', width: '100%' })),
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["l" /* transition */])('* <=> *', [
+        query(':enter, :leave', Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["k" /* style */])({ position: 'fixed', width: '100%' })),
         // query(':enter', style({ transform: 'translateX(100%)' })),
         query(':leave', Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["f" /* animateChild */])()),
         // sequence([
@@ -331,10 +434,10 @@ var routerTransition = Object(__WEBPACK_IMPORTED_MODULE_0__angular_animations__[
 
 /***/ }),
 
-/***/ "../../../../../src/assets/anthem.jpg":
+/***/ "../../../../../src/assets/mika3.jpg":
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "anthem.1b9fc34cbf5f7b004b68.jpg";
+module.exports = __webpack_require__.p + "mika3.5f6161ce3f91b33d73d3.jpg";
 
 /***/ }),
 
