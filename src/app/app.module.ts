@@ -6,19 +6,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { ContentBoxComponent } from './components/content-box/content-box.component';
-
+import { SharedModule } from './modules/shared/shared.module'; 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ContentBoxComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

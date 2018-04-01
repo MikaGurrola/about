@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { IdeasRoutingModule } from './ideas-routing.module';
 import { IdeasComponent } from './ideas/ideas.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    IdeasRoutingModule
+    IdeasRoutingModule, 
+    SharedModule
   ],
-  declarations: [IdeasComponent]
+  declarations: [
+    IdeasComponent
+  ]
 })
 export class IdeasModule { }

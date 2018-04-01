@@ -1,0 +1,98 @@
+@import '~sass/variables';
+
+
+:host /deep/ .article {
+  height: 100%;
+  // min-height: 100vh;
+  margin-bottom: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__image,
+  &__content {
+    width: 45%;
+  }
+
+  &__image {
+    border: 2px solid white;
+    height: 25vw;
+
+    background: 
+      linear-gradient($red 0%, $orange 80%), 
+      linear-gradient(to right, $red 0%, $orange 100%);  
+      // url('../../../assets/three21_1.jpg');
+    background-position: center;
+    background-size: 100%, 100% , cover;
+    background-repeat: no-repeat;
+    background-blend-mode: screen, difference, lighten;
+    transition: all 1s cubic-bezier(.55,0,.1,1);
+
+    &--threetwoone {
+      background: 
+      linear-gradient($red 0%, $orange 80%), 
+      linear-gradient(to right, $red 0%, $orange 100%),   
+      url('../../../assets/three21_1.jpg');
+      background-position: center;
+      background-size: 100%, 100% , cover;
+      background-repeat: no-repeat;
+    }
+    
+    &--prplrs {
+      background: 
+      linear-gradient($red 0%, $orange 80%), 
+      linear-gradient(to right, $red 0%, $orange 100%),   
+      url('../../../assets/prpl.jpg');
+      background-position: center;
+      background-size: 100%, 100% , cover;
+      background-repeat: no-repeat;
+    }
+
+    &--fs {
+      background: 
+      linear-gradient($red 0%, $orange 80%), 
+      linear-gradient(to right, $red 0%, $orange 100%),   
+      url('../../../assets/youtube.jpg');
+      background-position: center;
+      background-size: 100%, 100% , cover;
+      background-repeat: no-repeat;
+    }
+
+    @media screen and (max-width: 600px) {
+      background-size: 0, 0 , cover;
+    }
+
+
+    &:hover, {
+    background-size: 0, 0 , cover;
+    }
+  }
+
+  &__content {}
+
+  &:hover .article__image {
+    background-size: 0, 0 , cover;
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    justify-content: center;
+    min-height: initial;
+    margin-bottom: 50px;
+
+    &__image,
+    &__content {
+      width: 100%;
+    }
+
+    &__image {
+      height: 65vw;
+      margin-bottom: 20px;
+    }
+
+    .projects__demo {
+      margin: 20px 0;
+    }
+  }
+}
+

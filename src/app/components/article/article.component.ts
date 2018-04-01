@@ -7,33 +7,29 @@ import {
   transition
 } from '@angular/animations';
 
-
-
 export const scrollAnimation = trigger('scrollAnimation', [
   state('show', style({
     opacity: 1,
-    transform: "translateX(0)"
+    transform: "translateY(0)"
   })),
   state('hide',   style({
     opacity: 0,
-    transform: "translateX(-100%)"
+    transform: "translateY(100%)"
   })),
   transition('show => hide', animate('1s cubic-bezier(.55,0,.1,1)')),
   transition('hide => show', animate('1s cubic-bezier(.55,0,.1,1)'))
 ]);
 
 @Component({
-  selector: 'app-content-box',
-  templateUrl: './content-box.component.html',
-  styleUrls: ['./content-box.component.scss'],
+  selector: 'app-article',
+  templateUrl: './article.component.html',
+  styleUrls: ['./article.component.scss'],
   animations: [ scrollAnimation ],
   host: {
     '[@scrollAnimation]': ''
   },
 })
-
-
-export class ContentBoxComponent implements OnInit {
+export class ArticleComponent implements OnInit {
 
   state = 'hide'
 
@@ -42,10 +38,10 @@ export class ContentBoxComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
     checkScroll() {
       const componentPosition = this.el.nativeElement.offsetTop;
-      console.log('component position ' + componentPosition);
+      // console.log('component position ' + componentPosition);
       
-      const scrollPosition = window.pageYOffset + 150;
-      console.log('scroll position ' + scrollPosition);
+      const scrollPosition = window.pageYOffset + 300;
+      // console.log('scroll position ' + scrollPosition);
       
 
       if (scrollPosition >= componentPosition) {
