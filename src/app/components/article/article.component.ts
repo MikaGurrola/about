@@ -40,7 +40,7 @@ export class ArticleComponent implements OnInit {
       const componentPosition = this.el.nativeElement.offsetTop;
       // console.log('component position ' + componentPosition);
       
-      const scrollPosition = window.pageYOffset + 300;
+      const scrollPosition = window.pageYOffset + 400;
       // console.log('scroll position ' + scrollPosition);
       
 
